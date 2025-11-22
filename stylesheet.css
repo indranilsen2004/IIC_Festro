@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #eef3ff;
+  /*background:linear-gradient(30deg,black, white);*/
   font-family: Arial, sans-serif;
 }
 
@@ -8,26 +8,23 @@ body {
 .header {
   left: 0;
   height: 70px;
-  background: #0041aa;
-  color: rgb(0, 0, 0);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 42px;
   font-weight: bold;
   z-index: 999;
   box-shadow: 0 4px 15px rgba(40, 2, 2, 0.3); 
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0d6efd; /* Blue */
-    color: #b5a2a2;
+  background: #ffffff; /* Blue */
+    color: #000000;
     padding: 15px 20px;
     text-align: center;
     font-size: 26px;
-    font-weight: bold;
     z-index: 999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    /*box-shadow: 0 4px 10px rgba(0,0,0,0.25);*/
 }
 
 /* ---------- Responsive Grid Container ---------- */
@@ -40,13 +37,13 @@ body {
   grid-template-columns: repeat( minmax(150px, 1fr));
   grid-gap: 20px;
 }
-
+img{
+    opacity: .75;
+}
 /* ---------- Button Boxes ---------- */
 .box {
-  background: #1a73e8;
+  background: #000000;
   border-radius: 14px;
-  height: 300px;
-  margin: 20px;
   
   display: flex;
   align-items: center;
@@ -57,14 +54,13 @@ body {
 }
 
 .box_big{
-    width: 600px;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
 }
 
 /* Hover Effect (Glowing Animation) */
 .box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
+  box-shadow: 0 0 25px rgba(255, 25, 0, 0.9);
 }
 
 /* Images inside boxes */
@@ -75,25 +71,42 @@ body {
   border-radius: 12px;
 }
 
-/* Small box */
-.box-small {
-  height: 80px;
-}
-
-/* Long bottom box */
-.box-long {
-  height: 120px;
-  grid-column: span 2;
-}
 button{
     all: unset; /* Removes all inherited and default styles */
     display: inline-block; /* Restore display so it behaves like a button */
     
 
 }
+.carnival{
+    height: 350px;
+    width:900px;
+}
+.hackathon{
+    width: 700px;
+    height: 350px;
+}
+.classic{
+    height: 300px;
+    width: 500px;
+}
+.zomaland{
+    height: 300px;
+    width: 582px;
+
+}
+
+.sunburn{
+    height: 300px;
+    width: 500px;
+}
 /* Responsive fix for smaller screens */
 @media (max-width: 600px) {
   .box-long {
     grid-column: span 1;
   }
+}
+.header_logo{
+    opacity: 1;
+    width: 170px;
+    padding-top:25px ;
 }
