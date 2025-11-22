@@ -6,28 +6,38 @@ body {
 
 /* ---------- Fixed Header ---------- */
 .header {
-  position: fixed;
-  top: 0;
   left: 0;
-  width: 100%;
   height: 70px;
-  background: #0a3d91;
-  color: white;
+  background: #0041aa;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 42px;
   font-weight: bold;
   z-index: 999;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(40, 2, 2, 0.3); 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0d6efd; /* Blue */
+    color: #b5a2a2;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 /* ---------- Responsive Grid Container ---------- */
 .container {
   margin-top: 90px;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  grid-template-columns: repeat( minmax(150px, 1fr));
   grid-gap: 20px;
 }
 
@@ -35,14 +45,20 @@ body {
 .box {
   background: #1a73e8;
   border-radius: 14px;
-  height: 150px;
+  height: 300px;
+  margin: 20px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease-in-out;
+}
+
+.box_big{
+    width: 600px;
+    background-color: red;
 }
 
 /* Hover Effect (Glowing Animation) */
@@ -69,7 +85,12 @@ body {
   height: 120px;
   grid-column: span 2;
 }
+button{
+    all: unset; /* Removes all inherited and default styles */
+    display: inline-block; /* Restore display so it behaves like a button */
+    
 
+}
 /* Responsive fix for smaller screens */
 @media (max-width: 600px) {
   .box-long {
