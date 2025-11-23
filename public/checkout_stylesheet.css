@@ -254,12 +254,6 @@ input {
   border-radius: 10px;
   border-color: rgba(255, 255, 255, 0);
 }
-.DOB_input {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-between;
-}
 h4 {
   margin: 0;
   padding: 0;
@@ -339,7 +333,7 @@ h4 {
   transition: ease-in-out 0.2s;
 }
 .place_order:hover {
-  background-color: #c5a3ee;
+  background-color: #8652c5;
   transform: translateY(-1px);
   transition-delay: 0.1s;
   box-shadow: 0 0 25px rgba(105, 105, 105, 0.9);
