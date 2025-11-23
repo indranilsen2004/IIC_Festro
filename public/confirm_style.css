@@ -1,0 +1,23 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: #fafafa;
+  padding: 20px;
+  text-align: center;
+}
+.box {
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #4e9cff;
+  color: white;
+  cursor: pointer;
+}
