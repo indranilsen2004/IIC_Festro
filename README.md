@@ -13,3 +13,5 @@ This webpage is built using:
 3. JS
 4. NODE JS
 5. PROGESQSQL
+
+npm install express morgan body-parser prohairesis dotenv
