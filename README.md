@@ -15,3 +15,5 @@ This webpage is built using:
 5. PROGESQSQL
 
 npm install express morgan body-parser prohairesis dotenv
+npm start
+http://localhost:8080/
