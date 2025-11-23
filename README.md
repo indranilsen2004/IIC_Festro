@@ -64,15 +64,25 @@ Each event card is clickable and visually highlighted with bold text overlay
 How to access through VS Code?
 
 Step 1: Open VS Code
+
 Step 2: Clone Repo
+
 ```git clone git https://github.com/indranilsen2004/IIC_Festro.git```
+
 Step 3: Install necessary dependancies
+
 ```npm install express morgan body-parser prohairesis dotenv```
+
 ```npm install sqlite3 better-sqlite3```
+
 Step 4: Install Sqlite-browser from link https://sqlitebrowser.org/dl/
+
 Step 5: Relocate to the correct directory --->IIC_Festro
+
 Step 6: Run 'npm start' or 'node index.js'
+
 Step 7: Open a desired browser and go to localhost:8080
+
 Step 8: Use the website,have fun ......
 
 
