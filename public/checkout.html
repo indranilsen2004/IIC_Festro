@@ -86,27 +86,31 @@
           </p>
         </div>
         <div class="checkout">
-          <h2>Checkout</h2>
+          <h2 class="h2_checkout">Checkout</h2>
           <form id="checkoutForm">
             <div class="full_name">
-              <label for="first_name">First Name</label>
-              <input
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="First Name"
-                required
-              />
-              <label for="last_name">Last Name</label>
-              <input
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Last Name"
-              />
+              <div class="first_name">
+                <label for="first_name">First Name : </label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="last_name">
+                <label for="last_name">Last Name : </label>
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Last Name"
+                />
+              </div>
             </div>
-            <div>
-              <label for="mobile">Mobile Number</label>
+            <div class="mobile">
+              <label for="mobile">Mobile Number: </label>
               <input
                 type="tel"
                 id="mobile"
@@ -115,8 +119,8 @@
                 required
               />
             </div>
-            <div>
-              <label for="email">Email Id</label>
+            <div class="email">
+              <label for="email">Email Id: </label>
               <input
                 type="email"
                 id="email"
@@ -125,8 +129,8 @@
                 required
               />
             </div>
-            <div>
-              <label for="idcard"> Valid ID number</label>
+            <div class="idcard">
+              <label for="idcard"> Valid ID number: </label>
               <input
                 type="number"
                 id="idcard"
@@ -134,21 +138,22 @@
                 placeholder="Valid ID"
               />
             </div>
-            <div>
-              <label for="bday">DOB</label>
+            <div class="DOB">
+              <label for="bday">DOB: </label>
               <input type="date" id="bday" name="bday" min="2010-1-1" />
             </div>
-            <div>
+            <h4>Number of Guest</h4>
+            <div class="radio-group">
               <input type="radio" id="1" name="no" value="1" />
-              <label for="1">1 Pass - ₹999</label><br />
+              <label for="1">ONE</label><br />
               <input type="radio" id="2" name="no" value="2" />
-              <label for="2">2 Pass - ₹1899</label><br />
+              <label for="2">TWO</label><br />
               <input type="radio" id="3" name="no" value="3" />
-              <label for="3">3 Pass - ₹2699</label><br />
+              <label for="3">THREE</label><br />
             </div>
-            <div>
+            <div class="vip">
               <label for="vip"> Passes Type</label>
-              <select name="vip" id="vip">
+              <select class="vip_lis" name="vip" id="vip">
                 <option value="Ordinary">Ordinary</option>
                 <option value="Frontrow">Front-Row</option>
                 <option value="Annex">Annex</option>
@@ -156,13 +161,18 @@
                 <option value="VIP">VIP</option>
               </select>
             </div>
-            <div>
-              <input type="checkbox" name="newsletter" id="newsletter" />
-              <label for="newsletter"
-                >Get notified about Additional Offers</label
+            <div class="newsletter">
+              <input
+                class="newsletter_checkbox"
+                type="checkbox"
+                name="newsletter"
+                id="newsletter"
+              />
+              <label class="newsletter" for="newsletter"
+                >Subscribe to Newsletter.</label
               >
             </div>
-            <button>Place Order</button>
+            <button class="place_order">Place Order</button>
           </form>
         </div>
       </div>
