@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FESTRO</title>
+    <link rel="stylesheet" href="./stylesheet_checkout.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img class="header_logo" src="./Images/Festro_Logo.png" alt="" />
+      <button class="contact_us">Contact Us</button>
+    </div>
+    <div class="main">
+      <div class="left_cont">
+        <div class="banner"><h2>ZOMALAND</h2></div>
+        <div class="description">
+          <h2 class="title">About the event</h2>
+          <p>
+            Zomaland is India's largest food and music festival, bringing
+            together the best of culinary delights and live performances.
+            Experience a vibrant atmosphere filled with delicious food stalls,
+            exciting activities, and electrifying music from top artists.
+            Zomaland is one of the most vibrant, colourful, and high-energy food
+            and entertainment carnivals in the country, and this weekend, we
+            bring that entire experience to life right here. Designed as a
+            celebration of flavours, music, creativity, and community, Zomaland
+            transforms a regular weekend into an unforgettable festival filled
+            with excitement, exploration, and pure joy. Whether you’re a foodie
+            looking to try something new, a music lover searching for great
+            performances, or simply someone wanting to enjoy a lively day out
+            with friends and family, Zomaland offers something special for
+            everyone.
+          </p>
+
+          <div class="banner2"></div>
+          <h2>Event Guide</h2>
+          <div class="event_guide">
+            <div>
+              <h3>Duration</h3>
+              <p>
+                <img
+                  class="event_guide_icon"
+                  src="./Images/duration.png"
+                  alt="Time"
+                />All Day
+              </p>
+            </div>
+            <div>
+              <h3>Age Restriction</h3>
+              <p>
+                <img
+                  class="event_guide_icon"
+                  src="./Images/ticket.png"
+                  alt="AGE"
+                />18+
+              </p>
+            </div>
+            <div>
+              <h3>Performances Start</h3>
+              <p>
+                <img
+                  class="event_guide_icon"
+                  src="./Images/info.png"
+                  alt="Info"
+                />6pm IST
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right_cont">
+        <div class="details box">
+          <h2>ZOMALAND</h2>
+          <p class="detail_item">
+            <img class="favicon" src="./Images/schedule.png" alt="" /> Date:
+            25th - 30th Dec 2024
+          </p>
+          <p class="detail_item">
+            <img class="favicon" src="./Images/earth-globe.png" alt="" />Venue:
+            IIC Grounds,TMSL
+          </p>
+          <p class="detail_item">
+            <img class="favicon" src="./Images/location.png" alt="" />Landmark:
+            PWC Office
+          </p>
+        </div>
+        <div class="checkout">
+          <h2>Checkout</h2>
+          <form id="checkoutForm">
+            <div class="full_name">
+              <label for="first_name">First Name</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="First Name"
+                required
+              />
+              <label for="last_name">Last Name</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Last Name"
+              />
+            </div>
+            <div>
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="eg: 9876543210"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email Id</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="eg: festro@gmail.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="idcard"> Valid ID number</label>
+              <input
+                type="number"
+                id="idcard"
+                name="idcard"
+                placeholder="Valid ID"
+              />
+            </div>
+            <div>
+              <label for="bday">DOB</label>
+              <input type="date" id="bday" name="bday" min="2010-1-1" />
+            </div>
+            <div>
+              <input type="radio" id="1" name="no" value="1" />
+              <label for="1">1 Pass - ₹999</label><br />
+              <input type="radio" id="2" name="no" value="2" />
+              <label for="2">2 Pass - ₹1899</label><br />
+              <input type="radio" id="3" name="no" value="3" />
+              <label for="3">3 Pass - ₹2699</label><br />
+            </div>
+            <div>
+              <label for="vip"> Passes Type</label>
+              <select name="vip" id="vip">
+                <option value="Ordinary">Ordinary</option>
+                <option value="Frontrow">Front-Row</option>
+                <option value="Annex">Annex</option>
+                <option value="Carnival">Carnival</option>
+                <option value="VIP">VIP</option>
+              </select>
+            </div>
+            <div>
+              <input type="checkbox" name="newsletter" id="newsletter" />
+              <label for="newsletter"
+                >Get notified about Additional Offers</label
+              >
+            </div>
+            <button>Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="notable_artist">
+    <h2 class="h2notable_artist">Notable Artists</h2>
+    <div class="artist_list">
+      <p class="artist box nucleya">Nucleya</p>
+      <p class="artist box lost_stories">Lost Stories</p>
+      <p class="artist box jonita_gandhi">Jonita Gandhi</p>
+      <p class="artist box badshah">Badshah</p>
+    </div>
+  </div>
+  <script>
+    document
+      .getElementById("checkoutForm")
+      .addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = Object.fromEntries(new FormData(e.target));
+
+        const response = await fetch("/api/user", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        // Redirect user WITH the ID
+        window.location.href = `/payment.html?id=${data.order_id}`;
+      });
+  </script>
+</html>

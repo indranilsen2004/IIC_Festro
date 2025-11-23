@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="./payment_stylesheet.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h2>Choose Payment Method</h2>
+
+      <label for="paymentMethod">Select Method:</label>
+      <select id="paymentMethod">
+        <option value="">-- Select --</option>
+        <option value="upi">UPI</option>
+        <option value="card">Card</option>
+      </select>
+
+      <!-- UPI SECTION -->
+      <div id="upi-section">
+        <h3>Scan to Pay (UPI)</h3>
+        <img class="qr" src="./qr.png" alt="QR Code" />
+        <button onclick="goToSuccess()">I Have Paid</button>
+      </div>
+
+      <!-- CARD SECTION -->
+      <div id="card-section">
+        <h3>Enter Card Details</h3>
+        <input type="text" placeholder="Card Number" />
+        <input type="text" placeholder="Expiry Date" />
+        <input type="text" placeholder="CVV" />
+        <button onclick="goToSuccess()">Pay Now</button>
+      </div>
+    </div>
+
+    <script>
+      // Show/hide payment methods
+      document
+        .getElementById("paymentMethod")
+        .addEventListener("change", function () {
+          const method = this.value;
+
+          document.getElementById("upi-section").style.display =
+            method === "upi" ? "block" : "none";
+          document.getElementById("card-section").style.display =
+            method === "card" ? "block" : "none";
+        });
+      function goToSuccess() {
+        // read order id from current page URL
+        const id = new URLSearchParams(location.search).get("id");
+
+        // go to success page WITH the order ID attached
+        window.location.href = `/success.html?id=${id}`;
+      }
+    </script>
+  </body>
+</html>

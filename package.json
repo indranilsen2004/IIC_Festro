@@ -1,0 +1,30 @@
+{
+  "name": "iic_festro",
+  "version": "1.0.0",
+  "description": "FESTRO Its a place for all event and carnival needs. Multiple events under one site, amde for all ages with convinience in mind.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indranilsen2004/IIC_Festro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indranilsen2004/IIC_Festro/issues"
+  },
+  "homepage": "https://github.com/indranilsen2004/IIC_Festro#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.4.6",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "mysql": "^2.18.1",
+    "prohairesis": "^1.2.5",
+    "razorpay": "^2.9.6"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Successful</title>
+    <title>Payment Successful</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        padding: 40px;
+        background: #f4fff4;
+      }
+      button {
+        padding: 12px 20px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎉 Payment Successful!</h1>
+    <p>Your order has been confirmed.</p>
+
+    <button onclick="downloadReceipt()">Download Receipt</button>
+
+    <script>
+      // confetti burst
+      setTimeout(() => {
+        confetti({ particleCount: 200, spread: 120 });
+      }, 300);
+
+      function downloadReceipt() {
+        const id = new URLSearchParams(location.search).get("id");
+        window.location.href = `/receipt?id=${id}`;
+      }
+    </script>
+  </body>
+</html>
