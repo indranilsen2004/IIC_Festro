@@ -11,13 +11,7 @@ body {
   margin: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.paymentMethod {
-  width: 60%;
-  padding: 10px;
-  margin: 10px 0 20px 0;
-  border: 1px solid #cccccc00;
-  border-radius: 4px;
-}
+
 #upi-section,
 #card-section {
   display: flex;
@@ -26,6 +20,7 @@ body {
   justify-content: center;
   align-content: center;
   justify-items: center;
+  display: none;
   margin-top: 20px;
 }
 img.qr {
@@ -58,4 +53,11 @@ button {
 }
 button:hover {
   background-color: #218838;
+}
+.paymentMethod {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #cccccc00;
+  border-radius: 4px;
 }
